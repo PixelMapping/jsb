@@ -215,7 +215,6 @@ class remind extends Component {
   };
 
   onCheck = (checkedKeys, checkedNodes) => {
-    console.log(checkedKeys)
     this.setState({
       checkedKeys: checkedKeys
     })

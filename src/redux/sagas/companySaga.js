@@ -14,7 +14,6 @@ function* companyweblist(action) {
       yield put({ type:companyTypes.COMPANYWEBLIST_SUCCESS,data:data });
   
     } catch (error) {
-      console.log(error)
     } finally {
       
     }
@@ -27,7 +26,6 @@ function* companyweblist(action) {
       yield put({ type:companyTypes.COMPANYDETAILWEB_SUCCESS,data:data });
   
     } catch (error) {
-      console.log(error)
     } finally {
       
     }
@@ -40,7 +38,6 @@ function* companyweblist(action) {
       yield put({ type:companyTypes.GETBASICCOMPANY_SUCCESS,data:data });
   
     } catch (error) {
-      console.log(error)
     } finally {
       
     }
@@ -53,7 +50,7 @@ function* companyweblist(action) {
       yield put({ type:companyTypes.GETCOMPANYOPERATERECORD_SUCCESS,data:data });
   
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -66,7 +63,7 @@ function* companyweblist(action) {
       yield put({ type:companyTypes.COMPANYOPERATEDETAIL_SUCCESS,data:data });
   
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -80,7 +77,7 @@ function* companyweblist(action) {
       message.success(data.message)
   
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -94,7 +91,7 @@ function* companyweblist(action) {
       // message.success(data.message)
   
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -108,20 +105,18 @@ function* companyweblist(action) {
       // message.success(data.message)
   
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
   }
 
   function* companyreviewoperatepass(action) {
-    console.log(action)
     try {
      let data = yield call(Apis.companyreviewoperatepass,action.payload.data);
      action.payload.callback(data)
   
       yield put({ type:companyTypes.COMPANYREVIEWOPERATEPASS_SUCCESS,data:data });
-      console.log("999999999999999999",data)
       // message.success(data.message)
       if(data.status != 200){
         message.warning(data.message)
@@ -130,7 +125,7 @@ function* companyweblist(action) {
       }
   
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -145,7 +140,7 @@ function* companyweblist(action) {
       // message.success(data.message)
   
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -159,7 +154,7 @@ function* companyweblist(action) {
       // message.success(data.message)
   
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -178,7 +173,7 @@ function* companyweblist(action) {
         message.success(data.message)
       }
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -192,7 +187,7 @@ function* companyweblist(action) {
       message.success(data.message)
   
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -206,7 +201,7 @@ function* companyweblist(action) {
       message.success(data.message)
   
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -220,7 +215,7 @@ function* companyweblist(action) {
       message.success(data.message)
       
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -233,7 +228,7 @@ function* companyweblist(action) {
       yield put({ type:companyTypes.GETREGIONBYPID_SUCCESS,data:data });
       
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -246,7 +241,7 @@ function* companyweblist(action) {
       yield put({ type:companyTypes.SGETREGIONBYPID_SUCCESS,data:data });
       
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -259,7 +254,7 @@ function* companyweblist(action) {
       yield put({ type:companyTypes.QGETREGIONBYPID_SUCCESS,data:data });
       
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -272,7 +267,7 @@ function* companyweblist(action) {
       yield put({ type:companyTypes.LEGALLIST_SUCCESS,data:data });
       
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -285,7 +280,7 @@ function* companyweblist(action) {
       yield put({ type:companyTypes.LEGALDETAIL_SUCCESS,data:data });
       
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -298,7 +293,7 @@ function* companyweblist(action) {
       yield put({ type:companyTypes.GETCOMPANYBYLEGALID_SUCCESS,data:data });
       
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -310,7 +305,7 @@ function* companyweblist(action) {
       yield put({ type:companyTypes.LOCKLEGAL_SUCCESS,data:data });
       message.success(data.message)
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -324,7 +319,7 @@ function* companyweblist(action) {
       yield put({ type:companyTypes.NAMEEXAMINE_SUCCESS,data:data });
       // message.success(data.message)
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -335,7 +330,7 @@ function* companyweblist(action) {
       yield put({ type:companyTypes.BUSINESSEXAMINE_SUCCESS,data:data });
       // message.success(data.message)
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -346,7 +341,7 @@ function* companyweblist(action) {
       yield put({ type:companyTypes.ACCOUNTEXAMINE_SUCCESS,data:data });
       // message.success(data.message)
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -357,7 +352,7 @@ function* companyweblist(action) {
       yield put({ type:companyTypes.TAXEXAMINE_SUCCESS,data:data });
       // message.success(data.message)
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -369,7 +364,7 @@ function* companyweblist(action) {
       yield put({ type:companyTypes.GETDATATYPE_SUCCESS,data:data });
       // message.success(data.message)
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -386,7 +381,7 @@ function* companyweblist(action) {
         message.success(data.message)
       }
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -402,7 +397,7 @@ function* companyweblist(action) {
         message.success(data.message)
       }
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -414,7 +409,7 @@ function* companyweblist(action) {
       yield put({ type:companyTypes.DATALIST_SUCCESS,data:data });
       // message.success(data.message)
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -430,7 +425,7 @@ function* companyweblist(action) {
         message.success(data.message)
       }
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -445,7 +440,7 @@ function* companyweblist(action) {
       //   message.success(data.message)
       // }
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -461,7 +456,7 @@ function* companyweblist(action) {
       //   message.success(data.message)
       // }
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -476,7 +471,7 @@ function* companyweblist(action) {
       //   message.success(data.message)
       // }
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -492,7 +487,7 @@ function* companyweblist(action) {
       //   message.success(data.message)
       // }
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -508,7 +503,7 @@ function* companyweblist(action) {
       //   message.success(data.message)
       // }
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -524,7 +519,7 @@ function* companyweblist(action) {
       //   message.success(data.message)
       // }
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -539,7 +534,7 @@ function* companyweblist(action) {
       //   message.success(data.message)
       // }
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -555,7 +550,7 @@ function* companyweblist(action) {
       //   message.success(data.message)
       // }
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -571,7 +566,7 @@ function* companyweblist(action) {
         message.success(data.message)
       }
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -583,7 +578,7 @@ function* companyweblist(action) {
       yield put({ type:companyTypes.GETCOMPANYSTATUSNUM_SUCCESS,data:data });
     
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -599,7 +594,7 @@ function* companyweblist(action) {
         message.success(data.message)
       }
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -616,7 +611,7 @@ function* companyweblist(action) {
         message.success(data.message)
       }
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }

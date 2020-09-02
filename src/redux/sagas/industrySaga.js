@@ -15,7 +15,7 @@ function* industrypage(action) {
       yield put({ type:industryTypes.INDUSTRYPAGE_SUCCESS,data:data });
   
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -28,7 +28,7 @@ function* industrypage(action) {
       yield put({ type:industryTypes.ADDINDUSTRY_SUCCESS,data:data });
   
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -41,7 +41,7 @@ function* industrypage(action) {
       yield put({ type:industryTypes.UPTINDUSTRY_SUCCESS,data:data });
   
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }
@@ -54,7 +54,7 @@ function* industrypage(action) {
       yield put({ type:industryTypes.DELINDUSTRY_SUCCESS,data:data });
   
     } catch (error) {
-      console.log(error)
+      
     } finally {
       
     }

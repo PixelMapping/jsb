@@ -79,12 +79,10 @@ class CompanyListOne extends Component {
             this.setState({
                 baseInfo: nextProps.baseInfo
             }, () => {
-                console.log("接受到的基本信息对接人信息", nextProps.baseInfo);
             })
         }
 
         if (nextProps.getcompanyoperaterecord) {
-            console.log("接收到的操作记录", nextProps.getcompanyoperaterecord)
             let data = nextProps.getcompanyoperaterecord;
             for (let i = 0; i < data.length; i++) {
                 data[i].key = i + 1;
@@ -94,7 +92,6 @@ class CompanyListOne extends Component {
             })
         }
         if (nextProps.headerData) {
-            console.log("接收到的头部操作信息", nextProps.headerData)
             this.setState({
                 headerData: nextProps.headerData
             })
@@ -116,7 +113,6 @@ class CompanyListOne extends Component {
                 let data= this.props.companyoperatepass({
                     companyId: this.state.baseInfo.companyId
                 });
-                console.log(11111,data);
 
                 // 2-1
                 //修改状态
@@ -136,7 +132,6 @@ class CompanyListOne extends Component {
     }
     //不通过
     companyoperatenopass = () => {
-        console.log("不通过")
         // 不通过触发modal框  
         this.setState({
             visible: true
@@ -144,7 +139,6 @@ class CompanyListOne extends Component {
 
     }
     handleOk = e => {
-        console.log("确定", e);
         this.props.companyoperatenopass({
             companyId: this.state.baseInfo.companyId,
             content: e.content
@@ -157,7 +151,6 @@ class CompanyListOne extends Component {
     };
 
     handleCancel = e => {
-        console.log(e);
         this.setState({
             visible: false,
         });

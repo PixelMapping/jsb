@@ -103,7 +103,6 @@ class BillDetail extends Component {
         });
     };
     handleOk = e => {
-        // console.log(e);
         let data = e;
         let invoiceList = data.invoiceList.fileList;
         let list = [];
@@ -278,18 +277,15 @@ class BillDetail extends Component {
             data.confirmList = listC
             data.contractInfo.dataList = listD
             data.paymentVoucherList = listP
-            console.log(22222222222222222222222222222222222222222,data)
             this.setState({
                 billinfo: data
             })
         }
         //开票
         if (nextProps.billReducer.getIn(["invoicecompletion"])) {
-            console.log(nextProps.billReducer.getIn(["invoicecompletion"]))
         }
         //获取开票信息
         if (nextProps.billReducer.getIn(["viewinvoice"])) {
-            console.log("开票信息", nextProps.billReducer.getIn(["viewinvoice"]))
             this.setState({
                 picData: nextProps.billReducer.getIn(["viewinvoice", "data"])
             })
@@ -300,7 +296,6 @@ class BillDetail extends Component {
     render() {
         let { routerList } = this.state
         let { baseInfo, contractInfo, operateList, processList, customerInfo, confirmList, paymentVoucherList } = this.state.billinfo;
-        // console.log("123",baseInfo.submitTime)
         //contractInfo 合同信息
         //customerInfo 客户开票信息
         //operateList 操作记录

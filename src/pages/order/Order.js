@@ -181,14 +181,12 @@ class Order extends Component {
   };
   
   remarkChange = (e)=>{
-    console.log(e.target.value)
     this.setState({
       remark:e.target.value
     })
   }
 
   handleOk = e => {
-    console.log("确定");
     this.props.addremark({
       orderId:this.state.id,
       remark:e.remark
@@ -204,7 +202,6 @@ class Order extends Component {
   };
 
   handleCancel = e => {
-    console.log(e);
     this.setState({
       visible: false,
     });
@@ -214,7 +211,6 @@ class Order extends Component {
   // onOk={this.upDateHandleOk}
   // onCancel={this.updateHandleCancel}
   updateShowModal = (id) => {
-    console.log("需要修改的id",id);
     this.props.orderdetail({
       orderId: id
     });
@@ -225,7 +221,6 @@ class Order extends Component {
   };
 
   upDateHandleOk = e => {
-    console.log("xxxxxxx",e);
     let data = e;
     data.orderId = this.state.updateOrderId;
     // data.giveMonth = e.giveTime;
@@ -240,7 +235,6 @@ class Order extends Component {
   };
 
   updateHandleCancel = e => {
-    console.log(e);
     this.setState({
       updateVisible: false,
     });
@@ -256,10 +250,8 @@ class Order extends Component {
       okType: 'danger',
       cancelText: '否',
       onOk() {
-        console.log('OK');
       },
       onCancel() {
-        console.log('Cancel');
       },
     });
   }
@@ -278,7 +270,6 @@ class Order extends Component {
         search: this.state.select.endDate
       },
     }, () => {
-      console.log(this.state.select.status)
     })
   }
 
@@ -296,7 +287,6 @@ class Order extends Component {
         search: this.state.select.endDate
       },
     }, () => {
-      console.log(this.state.select.companyTypeId)
     })
   }
   // 支付方式 
@@ -313,7 +303,6 @@ class Order extends Component {
         search: this.state.select.endDate
       },
     }, () => {
-      console.log(this.state.select.payType)
     })
   }
   //创建时间
@@ -332,13 +321,11 @@ class Order extends Component {
         },
         DateValue: ""
       }, () => {
-        console.log(this.state.select)
       })
     }
 
   }
   onChange = (date, dateString) => {
-    console.log(date, dateString)
     this.setState({
       select: {
         page: this.state.select.page,
@@ -352,11 +339,9 @@ class Order extends Component {
       },
       DateValue: date
     }, () => {
-      console.log(this.state.select)
     })
   }
   inputChange = (e) => {
-    console.log(e.target.value)
     this.setState({
       select: {
         page: this.state.select.page,
@@ -373,7 +358,6 @@ class Order extends Component {
   }
 
   paginationChange = (current) => {
-    console.log(current)
     this.setState({
       current
     })
@@ -419,7 +403,6 @@ class Order extends Component {
   componentWillReceiveProps(nextProps) {
     //获取产品分类列表=>公司分类列表
     if (nextProps.productReducer.getIn(["productclassify", "data", "rows"])) {
-      console.log("公司分类列表", nextProps.productReducer.getIn(["productclassify", "data", "rows"]));
       this.setState({
         orderList: nextProps.productReducer.getIn(["productclassify", "data", "rows"])
       })
@@ -427,9 +410,7 @@ class Order extends Component {
     //获取订单列表
     if (nextProps.orderReducer.getIn(["orderlist", "data"])) {
       let data = nextProps.orderReducer.getIn(["orderlist", "data"]);
-      console.log("8888888888", data.total)
       let orderList = data.rows;
-      console.log("8888888888", data.rows)
       for (let i = 0; i < orderList.length; i++) {
         orderList[i].key = i + 1;
       }
@@ -449,7 +430,6 @@ class Order extends Component {
 
     //数据
     if(nextProps.orderReducer.getIn(["getordercount"])){
-      console.log("数据",nextProps.orderReducer.getIn(["getordercount"]))
       this.setState({
         number: nextProps.orderReducer.getIn(["getordercount","data"])
       })
@@ -543,7 +523,6 @@ class Order extends Component {
           <Table bordered
             rowSelection={{
               onChange: (selectedRowKeys, selectedRows) => {
-                console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
               },
             }}
             pagination={{

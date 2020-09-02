@@ -16,7 +16,6 @@ var list = {
 class OrderLineCharts extends Component {
 
     // componentDidMount(){
-    //     console.log
     //     this.init();
     //   }
 
@@ -235,7 +234,6 @@ class OrderLineCharts extends Component {
         //页面大小改变 ehcarts 重新渲染自适应
         window.addEventListener("resize", () => {
             // this.init();
-            // console.log("123",weekCharts);
             weekCharts.resize();
         })
     }
@@ -246,17 +244,17 @@ class OrderLineCharts extends Component {
 
         return (
             <React.Fragment>
-                <Row gutter="20">
-                    <Col span="8">
+                <Row gutter={20}>
+                    <Col span={8}>
                         <div ref="charts-left" style={{  height: "300px",background:'#fff',padding:20 }}>
                         </div>
                     </Col>
-                    <Col span="8">
+                    <Col span={8}>
                         <div ref="charts-center" style={{  height: "300px",background:'#fff',padding:20  }}>
                         </div>
 
                     </Col>
-                    <Col span="8">
+                    <Col span={8}>
                         <div ref="charts-right" style={{ height: "300px",background:'#fff',padding:20  }}>
                         </div>
                     </Col>

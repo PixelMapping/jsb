@@ -91,7 +91,6 @@ class CompanyListOneRepeat extends Component {
     }
 
     onChange = e => {
-        console.log('radio checked', e.target.value);
         this.setState({
             value: e.target.value,
         });
@@ -102,12 +101,10 @@ class CompanyListOneRepeat extends Component {
             this.setState({
                 baseInfo: nextProps.baseInfo
             }, () => {
-                console.log("接受到的基本信息对接人信息", nextProps.baseInfo);
             })
         }
 
         if (nextProps.getcompanyoperaterecord) {
-            console.log("接收到的操作记录", nextProps.getcompanyoperaterecord)
             let data = nextProps.getcompanyoperaterecord;
             for (let i = 0; i < data.length; i++) {
                 data[i].key = i + 1;
@@ -117,23 +114,19 @@ class CompanyListOneRepeat extends Component {
             })
         }
         if (nextProps.headerData) {
-            console.log("接收到的头部操作信息", nextProps.headerData)
             this.setState({
                 headerData: nextProps.headerData
             })
 
         }
         if (nextProps.getcompletedata) {
-            console.log("接受到的资料补全信息", nextProps.getcompletedata)
             this.setState({
                 getcompletedata: nextProps.getcompletedata
             })
         }
         //复审通过的结果
         if (nextProps.companyReducer.getIn(["companyreviewoperatepass"])) {
-            console.log(nextProps.companyReducer.getIn(["companyreviewoperatepass"]))
             let data = nextProps.companyReducer.getIn(["companyreviewoperatepass"]);
-            console.log("复审+++++++", data)
             if (data.status == 201) {
                 // message.warning(data.message)
             } else {
@@ -143,7 +136,6 @@ class CompanyListOneRepeat extends Component {
 
         //获取经办人列表
         if (nextProps.companyReducer.getIn(["getmanagerlist"])) {
-            console.log("经办人列表", nextProps.companyReducer.getIn(["getmanagerlist", "data"]))
             this.setState({
                 getmanagerlist: nextProps.companyReducer.getIn(["getmanagerlist", "data"])
             })
@@ -151,7 +143,6 @@ class CompanyListOneRepeat extends Component {
 
     }
     // nopass = ()=>{
-    //     // console.log("退出")
     //     // window.history.back(-1);  
     // }
 
@@ -163,7 +154,6 @@ class CompanyListOneRepeat extends Component {
     }
 
     twoHandleOk = e => {
-        console.log("粑粑了累吧", e, this.state.baseInfo.companyId)
         let data = {};
         data.companyId = this.state.baseInfo.companyId;
         data.handleId = e.typeName;
@@ -181,12 +171,10 @@ class CompanyListOneRepeat extends Component {
         //区名称
         data.areaName = e.totalInvoice[2];
 
-        console.log("GGGG", data)
 
         // data.handleName
 
         this.props.companyreviewoperatepass(data, (data) => {
-            console.log("执行完了", data);
             this.props.changeState(4)
         });
         // setTimeout(()=>{
@@ -216,7 +204,6 @@ class CompanyListOneRepeat extends Component {
 
     //复审不通过 
     companyreviewoperatenopass = () => {
-        console.log("复审不通过");
         // 触发 modal
         this.setState({
             visible: true,
@@ -225,7 +212,6 @@ class CompanyListOneRepeat extends Component {
     }
 
     handleOk = e => {
-        console.log("确定", e);
         this.props.companyreviewoperatenopass({
             companyId: this.state.baseInfo.companyId,
             content: e.content
@@ -242,7 +228,6 @@ class CompanyListOneRepeat extends Component {
     };
 
     handleCancel = e => {
-        console.log(e);
         this.setState({
             visible: false,
         });

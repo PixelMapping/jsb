@@ -501,7 +501,6 @@ class CompanyList extends Component {
     let { companyStatus, companyTypeId, establishBeginTime, establishEndTime } = this.state.select
 // if(number){
 //    let data = Object.values(number[0])
-//    console.log("123",data)
 
 // }
     return (
@@ -567,7 +566,6 @@ class CompanyList extends Component {
           <Table bordered 
           rowSelection={{
             onChange: (selectedRowKeys, selectedRows) => {
-              // console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
               this.setState({
                 selectData:selectedRows
               })

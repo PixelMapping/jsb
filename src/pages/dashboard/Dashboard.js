@@ -29,7 +29,6 @@ class Dashboard extends Component {
 
   componentDidMount(){
     ApiRequest.get(urls.INDEXINFO).then(res=>{
-      console.log(res)
       if(res.status==200){
         this.setState({
           dataInfo:res.data
@@ -40,7 +39,6 @@ class Dashboard extends Component {
  
   //  select
   select = key => {
-    console.log(key);
   };
 
   toPage = val => {

@@ -128,7 +128,6 @@ class CustomerService extends Component {
   };
 
   handleOk = e => {
-    console.log("添加返回的数据",e);
   if(e.area){
     this.props.addmanage(Object.assign(
       e, {
@@ -154,7 +153,6 @@ class CustomerService extends Component {
   };
 
   handleCancel = e => {
-    console.log(e);
     this.setState({
       visible: false,
     });
@@ -171,7 +169,6 @@ class CustomerService extends Component {
   };
 
   editHandleOk = e => {
-    console.log("编辑后的数据",e);
     this.props.editmanage(Object.assign(
       {
         manageId: this.state.editData.manageId,
@@ -191,7 +188,6 @@ class CustomerService extends Component {
   };
 
   editHandleCancel = e => {
-    console.log(e);
     this.setState({
       editVisible: false,
     });
@@ -207,10 +203,8 @@ class CustomerService extends Component {
     okType: 'danger',
     cancelText: '否',
     onOk() {
-      console.log('OK');
     },
     onCancel() {
-      console.log('Cancel');
     },
   });
 }
@@ -233,7 +227,6 @@ componentWillReceiveProps(nextProps){
 
 
    onChange=(e)=> {
-     console.log(e.target.value)
     this.setState({
       search:{
         page:1,
@@ -247,7 +240,6 @@ componentWillReceiveProps(nextProps){
   }
 
   swonChange = (userId,value) => {
-    console.log(userId,value)
     if(value == 0){
       //2
       this.props.isusing({

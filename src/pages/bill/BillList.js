@@ -165,14 +165,12 @@ class BillList extends Component {
   };
 
   handleOk = e => {
-    console.log(e);
     this.setState({
       visible: false,
     });
   };
 
   handleCancel = e => {
-    console.log(e);
     this.setState({
       visible: false,
     });
@@ -186,14 +184,12 @@ class BillList extends Component {
   };
 
   editHandleOk = e => {
-    console.log(e);
     this.setState({
       visible: false,
     });
   };
 
   editHandleCancel = e => {
-    console.log(e);
     this.setState({
       editVisible: false,
     });
@@ -209,10 +205,8 @@ class BillList extends Component {
       okType: 'danger',
       cancelText: '否',
       onOk() {
-        console.log('OK');
       },
       onCancel() {
-        console.log('Cancel');
       },
     });
   }
@@ -229,7 +223,6 @@ class BillList extends Component {
     this.setState({
       select: Object.assign(this.state.select, { companyType: value })
     },()=>{
-      console.log(this.state.select)
     })
   }
  
@@ -244,7 +237,6 @@ class BillList extends Component {
 
   }
   onChange = (date, dateString) => {
-    console.log(date, dateString)
     this.setState({
       select:Object.assign(this.state.select,{ startDate: dateString[0] ,endDate: dateString[1]}),
       searchValue: date
@@ -252,7 +244,6 @@ class BillList extends Component {
   }
 
   paginationChange = (current)=>{
-    console.log(current)
     this.setState({
      select: Object.assign(this.state.select, { page: current} ),
      current
@@ -285,14 +276,12 @@ class BillList extends Component {
 
   componentWillReceiveProps(nextProps){
    if(nextProps.productReducer.getIn(["productclassify","data","rows"])){
-      console.log("公司类型", nextProps.productReducer.getIn(["productclassify","data","rows"]))
       this.setState({
         companyTypeList: nextProps.productReducer.getIn(["productclassify","data","rows"])
       })
    }
    //发票列表
    if(nextProps.billReducer.getIn(["invoicepage"])){
-      console.log("发票,列表", nextProps.billReducer.getIn(["invoicepage"]))
       let data = nextProps.billReducer.getIn(["invoicepage","data","rows"])
       for(let i=0; i< data.length; i++){
          data[i].key = i+1;
@@ -304,7 +293,6 @@ class BillList extends Component {
    }
    //发票统计数量
    if(nextProps.billReducer.getIn(["countstatus"])){
-      console.log("发票统计数量", nextProps.billReducer.getIn(["countstatus"]))
    }
   }
 
@@ -378,7 +366,6 @@ class BillList extends Component {
           <Table 
           rowSelection={{
             onChange: (selectedRowKeys, selectedRows) => {
-              console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
             },
           }}
           pagination={{

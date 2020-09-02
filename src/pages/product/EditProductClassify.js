@@ -45,7 +45,6 @@ class EditProductClassify extends Component {
         },
       };
 
-      console.log("会显示de shuju",data)
 
     return (
         <Modal

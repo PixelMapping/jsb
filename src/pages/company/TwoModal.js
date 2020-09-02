@@ -27,7 +27,6 @@ class TwoModals extends Component {
 
   onOk = () => {
     this.props.form.validateFields((err, values) => {
-        console.log("数据",values)
       if (err) return;//检查Form表单填写的数据是否满足rules的要求
       this.props.onOk(values);//调用父组件给的onOk方法并传入Form的参数。
       this.props.form.resetFields();//重置Form表单的内容
@@ -40,7 +39,6 @@ class TwoModals extends Component {
 
   
   handleSelectedPosition = (value, selectedOptions) => {
-    console.log(value, selectedOptions)
     this.props.getregionbypid({
         pId: value[value.length - 1]
     });
@@ -53,7 +51,6 @@ class TwoModals extends Component {
 
 }
 loadData = selectedOptions => {
-    console.log("123123", selectedOptions)
 
     const targetOption = selectedOptions[selectedOptions.length - 1];
     targetOption.loading = true;

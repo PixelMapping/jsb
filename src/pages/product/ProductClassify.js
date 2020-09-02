@@ -92,7 +92,6 @@ class ProductClassify extends Component {
   }
   componentWillReceiveProps(nextProps){
     if(nextProps.productReducer.getIn(["productclassify"])){
-       console.log("123",nextProps.productReducer.getIn(["productclassify"]));
        let data = nextProps.productReducer.getIn(["productclassify","data","rows"]);
         for(let i=0 ; i<data.length; i++){
              data[i].key = i+1
@@ -108,7 +107,6 @@ class ProductClassify extends Component {
   }
 
   paginationChange = (current)=>{
-    console.log(current)
     this.setState({
       page: {
         page: current,
@@ -128,7 +126,6 @@ class ProductClassify extends Component {
   };
 
   handleOk = e => {
-    console.log("新增的玩意",e);
     this.props.addcompanytype(e);
     setTimeout(()=>{
       this.props.productclassify(this.state.page)
@@ -139,7 +136,6 @@ class ProductClassify extends Component {
   };
 
   handleCancel = e => {
-    console.log(e);
     this.setState({
       visible: false,
     });
@@ -147,7 +143,6 @@ class ProductClassify extends Component {
 
   // 编辑 modal 用的方法
   editShowModal = (record) => {
-    console.log("待编辑的扩列表",record)
     this.setState({
       editVisible: true,
       editList:record
@@ -155,7 +150,6 @@ class ProductClassify extends Component {
   };
 
   editHandleOk = e => {
-    console.log("编辑的数据,哈哈哈",e);
     this.setState({
       editVisible: false,
     },()=>{
@@ -169,7 +163,6 @@ class ProductClassify extends Component {
   };
 
   editHandleCancel = e => {
-    console.log(e);
     this.setState({
       editVisible: false,
     });
@@ -191,7 +184,6 @@ class ProductClassify extends Component {
       },300)
     },
     onCancel() {
-      console.log('Cancel');
     },
   });
 }

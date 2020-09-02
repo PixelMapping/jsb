@@ -35,13 +35,11 @@ class EditCustomerServices extends Component {
  
 
   onChange = e => {
-    console.log('radio checked', e.target.value);
     this.setState({
       value: e.target.value,
     });
   };
   onChanges = e=>{
-    console.log(e)
     // if(e == 2){
     //     this.setState({
     //       stt: true
@@ -66,7 +64,6 @@ class EditCustomerServices extends Component {
           sm: { span: 16 },
         },
       };
-      console.log("",data)
       let isShow = data.TYPE
 
     return (
@@ -99,7 +96,6 @@ class EditCustomerServices extends Component {
             })(
                 <Select onChange={(e)=>{
                     isShow = e
-                    console.log(e)
                 }}>
                   <Option value={"1"}>运营部</Option>
                   <Option value={"2"}>园区拓展部</Option>

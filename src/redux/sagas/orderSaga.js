@@ -14,7 +14,7 @@ function* orderlist(action) {
     yield put({ type:orderTypes.ORDERLIST_SUCCESS,data:data });
 
   } catch (error) {
-    console.log(error)
+    
   } finally {
     
   }
@@ -23,37 +23,34 @@ function* orderlist(action) {
 function* orderdetail(action) {
   try {
    let data = yield call(Apis.orderdetail,action.payload.data);
-    console.log("GGGGGGGGGGGGG",data)
     yield put({ type:orderTypes.ORDERDETAIL_SUCCESS,data:data });
 
   } catch (error) {
-    console.log(error)
+    
   } finally {
     
   }
 }
 
 function* orderrecord(action) {
-  console.log("888888888888888888888888888888888888888888",action)
   try {
    let data = yield call(Apis.orderrecord,action.payload.data);
     yield put({ type:orderTypes.ORDERRECORD_SUCCESS,data:data });
 
   } catch (error) {
-    console.log(error)
+    
   } finally {
     
   }
 }
 
 function* comfirmofflinepay(action) {
-  console.log("888888888888888888888888888888888888888888",action)
   try {
    let data = yield call(Apis.comfirmofflinepay,action.payload.data);
     yield put({ type:orderTypes.COMFIRMOFFLINEPAY_SUCCESS,data:data });
 
   } catch (error) {
-    console.log(error)
+    
   } finally {
     
   }
@@ -68,7 +65,7 @@ function* addremark(action) {
       message.success(data.message)
     }
   } catch (error) {
-    console.log(error)
+    
   } finally {
     
   }
@@ -83,7 +80,7 @@ function* uptorder(action) {
       message.success(data.message)
     }
   } catch (error) {
-    console.log(error)
+    
   } finally {
     
   }
@@ -98,7 +95,7 @@ function* getordercount(action) {
     //   message.success(data.message)
     // }
   } catch (error) {
-    console.log(error)
+    
   } finally {
     
   }
@@ -115,7 +112,7 @@ function* reject(action) {
       message.warning(data.message)
      }
   } catch (error) {
-    console.log(error)
+    
   } finally {
     
   }

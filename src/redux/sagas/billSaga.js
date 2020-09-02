@@ -14,7 +14,6 @@ function* invoicepage(action) {
       yield put({ type:billTypes.INVOICEPAGE_SUCCESS,data:data });
   
     } catch (error) {
-      console.log(error)
     } finally {
       
     }
@@ -27,7 +26,6 @@ function* invoicepage(action) {
       yield put({ type:billTypes.APPLYINVOICEPAGE_SUCCESS,data:data });
   
     } catch (error) {
-      console.log(error)
     } finally {
       
     }
@@ -40,7 +38,6 @@ function* invoicepage(action) {
       yield put({ type:billTypes.BILLINFO_SUCCESS,data:data });
   
     } catch (error) {
-      console.log(error)
     } finally {
       
     }
@@ -53,7 +50,6 @@ function* invoicepage(action) {
       yield put({ type:billTypes.AUDITPASS_SUCCESS,data:data });
   
     } catch (error) {
-      console.log(error)
     } finally {
       
     }
@@ -66,7 +62,6 @@ function* invoicepage(action) {
       yield put({ type:billTypes.INVOICECOMPLETION_SUCCESS,data:data });
   
     } catch (error) {
-      console.log(error)
     } finally {
       
     }
@@ -79,7 +74,6 @@ function* invoicepage(action) {
       yield put({ type:billTypes.EXPRESS_SUCCESS,data:data });
   
     } catch (error) {
-      console.log(error)
     } finally {
       
     }
@@ -95,7 +89,6 @@ function* invoicepage(action) {
         }
 
     } catch (error) {
-      console.log(error)
     } finally {
       
     }
@@ -104,11 +97,9 @@ function* invoicepage(action) {
   function* viewinvoice(action) {
     try {
      let data = yield call(Apis.viewinvoice,action.payload.data);
-      console.log(data)
       yield put({ type:billTypes.VIEWINVOICE_SUCCESS,data:data });
   
     } catch (error) {
-      console.log(error)
     } finally {
       
     }
@@ -117,11 +108,9 @@ function* invoicepage(action) {
   function* countstatus(action) {
     try {
      let data = yield call(Apis.countstatus,action.payload.data);
-      console.log(data)
       yield put({ type:billTypes.COUNTSTATUS_SUCCESS,data:data });
   
     } catch (error) {
-      console.log(error)
     } finally {
       
     }

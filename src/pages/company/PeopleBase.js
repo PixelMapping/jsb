@@ -49,7 +49,6 @@ class PeopleBases extends Component {
           sm: { span: 16 },
         },
       };
-//       console.log("基本信息,", baseInfo)
    
 
 

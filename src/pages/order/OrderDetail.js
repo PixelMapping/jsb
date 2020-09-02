@@ -214,7 +214,6 @@ class OrderDetail extends Component {
 
   componentDidMount() {
     //   接受路由传的参数
-    console.log("路由传过来的id", this.props.match.params);
     this.props.orderdetail({
       orderId: this.props.match.params.id
     });
@@ -229,7 +228,6 @@ class OrderDetail extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.orderReducer.getIn(["orderdetail"])) {
-      console.log("99999999", nextProps.orderReducer.getIn(["orderdetail", "data"]));
       let data = nextProps.orderReducer.getIn(["orderdetail", "data"])
       this.setState({
         orderDetail: nextProps.orderReducer.getIn(["orderdetail", "data"]),
@@ -286,7 +284,6 @@ class OrderDetail extends Component {
           }
         ]
       }, () => {
-        console.log("订单的状态", this.state.name)
       })
     }
 
@@ -315,7 +312,6 @@ class OrderDetail extends Component {
   };
 
   handleOk = e => {
-    console.log(e);
     this.setState({
       visible: false,
     }, () => {
@@ -336,7 +332,6 @@ class OrderDetail extends Component {
   };
 
   handleCancel = e => {
-    console.log(e);
     this.setState({
       visible: false,
     });
@@ -350,14 +345,12 @@ class OrderDetail extends Component {
   };
 
   editHandleOk = e => {
-    console.log(e);
     this.setState({
       visible: false,
     });
   };
 
   editHandleCancel = e => {
-    console.log(e);
     this.setState({
       editVisible: false,
     });
@@ -373,10 +366,8 @@ class OrderDetail extends Component {
       okType: 'danger',
       cancelText: '否',
       onOk() {
-        console.log('OK');
       },
       onCancel() {
-        console.log('Cancel');
       },
     });
   }
@@ -395,7 +386,6 @@ class OrderDetail extends Component {
   }
 //驳回方法-- 提交
   bohuiHandleOk = (e)=>{
-    console.log("驳回+++++",e)
     this.props.reject(Object.assign(e, {
       orderId: this.props.match.params.id
     }))

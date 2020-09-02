@@ -8,28 +8,22 @@ import Apis from "../../service/apis/1.0";
 
 
 function* productlist(action) {
-  console.log(action.payload)
   try {
    let data = yield call(Apis.productlist,action.payload.data);
-   console.log("产品列表",data)
     yield put({ type:productTypes.PRODUCTLIST_SUCCESS,data:data });
 
   } catch (error) {
-    console.log(error)
   } finally {
     
   }
 }
 
 function* productclassify(action){
-  // console.log("产品分类列表**********",action)
   try {
     let data = yield call(Apis.productclassify,action.payload.data);
-    // console.log("产品分类列表",data)
      yield put({ type:productTypes.PRODUCTCLASSIFY_SUCCESS,data:data });
  
    } catch (error) {
-    //  console.log("列表",error)
    } finally {
      
    }
@@ -39,7 +33,6 @@ function* deleteproductlist(action){
   try{
     let data = yield call(Apis.deleteproductlist,action.payload.data);
     yield put({ type:productTypes.DELETEPRODUCTLIST_SUCCESS,data:data });
-    // console.log("删除信息:",data)
     message.success(data.message)
   }
   catch(error){
@@ -77,10 +70,8 @@ function* getdictlistbytype(action){
   try{
     let data = yield call(Apis.getdictlistbytype);
     yield put({ type:productTypes.GETDICTLISTBYTYPE_SUCCESS,data:data });
-    console.log("开票额度",data)
   }
   catch(error){
-    console.log("开票额度",error)
   }
 }
 

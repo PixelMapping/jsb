@@ -316,7 +316,6 @@ class CompanyDetail extends Component {
     };
 
     peopleBaseHandleCancel = e => {
-        // console.log("修改完的基本信息",e);
         this.setState({
             peopleBaseVisible: false
         });

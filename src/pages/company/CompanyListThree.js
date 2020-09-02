@@ -168,7 +168,6 @@ class CompanyListThree extends Component {
                 getinvoiceinfo: nextProps.companyReducer.getIn(["getinvoiceinfo", "data"])
             })
         }
-        console.log('全部数据', nextProps)
         if (nextProps.companyReducer.getIn(["getcompletedata"])) {
             this.setState({
                 getcompletedata: nextProps.companyReducer.getIn(["getcompletedata", "data"])
@@ -222,7 +221,6 @@ class CompanyListThree extends Component {
     sendMsgHandleOk = e => {
         // this.props.form.validateFields((err, values) => {
         //     if (err) return;//检查Form表单填写的数据是否满足rules的要求
-        //     console.log(values)
         this.setState({
             sendMsgVisible: false
         }, () => {

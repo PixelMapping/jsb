@@ -475,7 +475,6 @@ class CompanyListTwos extends Component {
                 ischecked,
                 allChecked
             }, () => {
-                console.log("选")
             })
         }
 
@@ -500,7 +499,6 @@ class CompanyListTwos extends Component {
         }
 
         if (nextProps.getcompletedata) {
-            console.log("接受到的资料补全信息", nextProps.getcompletedata)
             this.setState({
                 getcompletedata: nextProps.getcompletedata
             })
@@ -576,7 +574,6 @@ class CompanyListTwos extends Component {
     sendMsgHandleOk = e => {
         // this.props.form.validateFields((err, values) => {
         //     if (err) return;//检查Form表单填写的数据是否满足rules的要求
-        //     console.log(values)
         this.setState({
             sendMsgVisible: false
         }, () => {

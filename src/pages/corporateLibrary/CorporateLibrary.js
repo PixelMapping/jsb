@@ -149,7 +149,6 @@ class CorporateLibrary extends Component {
                     createTime: value,
                 searchValue: value
             }, () => {
-                console.log(this.state.createTime)
             })
         }
 
@@ -163,7 +162,6 @@ class CorporateLibrary extends Component {
     }
 //    搜的关键词
 searchChange = (e)=>{
-    console.log(e.target.value)
     this.setState({
         search:e.target.value
     })
@@ -197,7 +195,6 @@ searchChange = (e)=>{
   }
 
   paginationChange = (current)=>{
-    console.log(current)
     this.setState({
       page: current,
       current
@@ -215,7 +212,6 @@ searchChange = (e)=>{
 
 
     handleSelectedPosition = (value, selectedOptions) => {
-        console.log(value, selectedOptions)
         this.props.getregionbypid({
             pId: value[value.length - 1]
         });
@@ -228,7 +224,6 @@ searchChange = (e)=>{
 
     }
     loadData = selectedOptions => {
-        console.log("123123", selectedOptions)
 
         const targetOption = selectedOptions[selectedOptions.length - 1];
         targetOption.loading = true;
@@ -271,7 +266,6 @@ searchChange = (e)=>{
     componentWillReceiveProps(nextProp) {
         // 法人库列表
         if(nextProp.companyReducer.getIn(["legallist"])){
-             console.log("法人库列表", nextProp.companyReducer.getIn(["legallist"]))
              let data = nextProp.companyReducer.getIn(["legallist","data","rows"]);
              let total = nextProp.companyReducer.getIn(["legallist","data","total"]);
                 for(let i=0; i<data.length; i++){
@@ -289,7 +283,6 @@ searchChange = (e)=>{
 
 
         if (nextProp.companyReducer.getIn(["getregionbypid"])) {
-            console.log("省", nextProp.companyReducer.getIn(["getregionbypid", "data"]))
             let options = [];
             let data = nextProp.companyReducer.getIn(["getregionbypid", "data"]);
             for (let i = 0; i < data.length; i++) {
@@ -306,7 +299,6 @@ searchChange = (e)=>{
         }
         //获取市
         if (nextProp.companyReducer.getIn(["sgetregionbypid"])) {
-            console.log("省", nextProp.companyReducer.getIn(["sgetregionbypid", "data"]))
             let soptions = [];
             let data = nextProp.companyReducer.getIn(["sgetregionbypid", "data"]);
             for (let i = 0; i < data.length; i++) {
@@ -323,7 +315,6 @@ searchChange = (e)=>{
         }
         //区
         if (nextProp.companyReducer.getIn(["qgetregionbypid"])) {
-            console.log("省", nextProp.companyReducer.getIn(["qgetregionbypid", "data"]))
             let qoptions = [];
             let data = nextProp.companyReducer.getIn(["qgetregionbypid", "data"]);
             for (let i = 0; i < data.length; i++) {
@@ -342,7 +333,6 @@ searchChange = (e)=>{
     }
     // //sChange
     sChange = (value) => {
-        console.log(value)
         this.props.sgetregionbypid({
             pId: value
         })
@@ -352,7 +342,6 @@ searchChange = (e)=>{
 
     }
     siChange = (value) => {
-        console.log(value)
         this.props.qgetregionbypid({
             pId: value
         })
@@ -361,7 +350,6 @@ searchChange = (e)=>{
         })
     }
     qChange = (value) => {
-        console.log(value)
     }
 
 //锁定法人操作
@@ -461,7 +449,6 @@ locklegal = (legalId)=>{
                     <Table 
                     rowSelection={{
                         onChange: (selectedRowKeys, selectedRows) => {
-                          console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
                         },
                       }}
                       pagination={{

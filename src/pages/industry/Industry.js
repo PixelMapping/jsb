@@ -87,7 +87,6 @@ class Industry extends Component {
           title: '操作',
           key: 'action',
           render: (text, record) => {
-            // console.log("8888",record)
             return (
               <>
                 <span className="btn-diy">
@@ -119,7 +118,6 @@ class Industry extends Component {
   }
 
   searchList = () => {
-    console.log(this.state.search)
     this.setState({
       current:1
     },()=>{
@@ -131,7 +129,6 @@ class Industry extends Component {
     this.setState({
       current
     })
-    // console.log(current)
     this.setState({
       search: {
         page: current,
@@ -142,7 +139,6 @@ class Industry extends Component {
       },
     },()=>{
       // 获取分页数据
-      // console.log(this.props)
       this.props.industrypage(this.state.search)
     })
   }
@@ -151,7 +147,6 @@ class Industry extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.industryReducer && nextProps.industryReducer.getIn(["industrypage","data"])) {
-      console.log("+++++++++++++", nextProps.industryReducer.getIn(["industrypage", "data"]))
       let data = nextProps.industryReducer.getIn(["industrypage", "data"]);
       // if (data.rows && data.rows.length > 0) {
         let list = data.rows;
@@ -167,7 +162,6 @@ class Industry extends Component {
 
     }
     if (nextProps.productReducer && nextProps.productReducer.getIn(["productclassify"])) {
-      console.log("获取产品分类列表", nextProps.productReducer.getIn(["productclassify"]))
       this.setState({
         productclassify: nextProps.productReducer.getIn(["productclassify", "data", "rows"])
       })
@@ -184,8 +178,6 @@ class Industry extends Component {
 
   // switchOnChange
   switchOnChange = (checked,value) => {
-    console.log(checked);
-    console.log(value)
     let data = value;
     if(checked == 1){
       data.packageState = 2
@@ -220,7 +212,6 @@ class Industry extends Component {
   };
 
   handleOk = e => {
-    console.log("新增",e);
 
    
     this.setState({
@@ -241,7 +232,6 @@ class Industry extends Component {
   };
 
   handleCancel = e => {
-    console.log(e);
     this.setState({
       visible: false,
     });
@@ -255,13 +245,11 @@ class Industry extends Component {
       this.setState({
         editList: record
       },()=>{
-        console.log(record)
       })
     });
   };
 
   editHandleOk = e => {
-    console.log(e);
     this.props.uptindustry(Object.assign(e,{id: this.state.editList.id}))
     this.setState({
       editVisible: false
@@ -300,7 +288,6 @@ class Industry extends Component {
   };
 
   editHandleCancel = e => {
-    console.log(e);
     this.setState({
       editVisible: false,
     });
@@ -316,14 +303,12 @@ class Industry extends Component {
       okType: 'danger',
       cancelText: '否',
       onOk: () => {
-        console.log('OK');
         this.props.delindustry({ id: record.id });
         setTimeout(() => {
           this.props.industrypage(this.state.search);
         }, 300)
       },
       onCancel() {
-        console.log('Cancel');
       },
     });
   }
@@ -338,7 +323,6 @@ class Industry extends Component {
     this.setState({
       current:1
     })
-    // console.log(`选中 ${data} ${value}`);
     if (data == "产品分类") {
       this.setState({
         search: {
@@ -422,7 +406,6 @@ class Industry extends Component {
             bordered
             rowSelection={{
               onChange: (selectedRowKeys, selectedRows) => {
-                console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
               },
             }}
             pagination={{

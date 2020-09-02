@@ -159,14 +159,12 @@ class ApplyBill extends Component {
     };
 
     handleOk = e => {
-        console.log(e);
         this.setState({
             visible: false,
         });
     };
 
     handleCancel = e => {
-        console.log(e);
         this.setState({
             visible: false,
         });
@@ -180,14 +178,12 @@ class ApplyBill extends Component {
     };
 
     editHandleOk = e => {
-        console.log(e);
         this.setState({
             visible: false,
         });
     };
 
     editHandleCancel = e => {
-        console.log(e);
         this.setState({
             editVisible: false,
         });
@@ -203,10 +199,8 @@ class ApplyBill extends Component {
             okType: 'danger',
             cancelText: '否',
             onOk() {
-                console.log('OK');
             },
             onCancel() {
-                console.log('Cancel');
             },
         });
     }
@@ -249,7 +243,6 @@ class ApplyBill extends Component {
     }
     //搜索按钮
     search = () => {
-        console.log(1111,this.state)
         this.setState({
             current:1
         },()=>{
@@ -271,7 +264,6 @@ class ApplyBill extends Component {
     }
 
     paginationChange = (current) => {
-        console.log(current)
         this.setState({
             select: Object.assign(this.state.select, { page: current }),
             current
@@ -283,14 +275,12 @@ class ApplyBill extends Component {
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.productReducer.getIn(["productclassify", "data", "rows"])) {
-            console.log("公司类型", nextProps.productReducer.getIn(["productclassify", "data", "rows"]))
             this.setState({
                 companyTypeList: nextProps.productReducer.getIn(["productclassify", "data", "rows"])
             })
         }
         //发票列表
         if (nextProps.billReducer.getIn(["applyinvoicepage"])) {
-            console.log("发票申请++++列表", nextProps.billReducer.getIn(["applyinvoicepage"]))
             let data = nextProps.billReducer.getIn(["applyinvoicepage", "data", "rows"]);
             let total = nextProps.billReducer.getIn(["applyinvoicepage", "data", "total"]);
             for (let i = 0; i < data.length; i++) {
@@ -304,7 +294,6 @@ class ApplyBill extends Component {
 
         //发票统计数量
    if(nextProps.billReducer.getIn(["countstatus"])){
-    console.log("发票统计数量", nextProps.billReducer.getIn(["countstatus"]))
     this.setState({
         num: nextProps.billReducer.getIn(["countstatus","data"])
     })
@@ -391,7 +380,6 @@ class ApplyBill extends Component {
                     <Table
                         rowSelection={{
                             onChange: (selectedRowKeys, selectedRows) => {
-                                console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
                             },
                         }}
                         pagination={{

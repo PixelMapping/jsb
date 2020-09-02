@@ -20,7 +20,6 @@ class MasterPage extends Component {
   }
   render() {
     const { route } = this.props;
-    console.log("route --- --- ", this.props);
 
     const { className, children, title, subTitle, side, search, topRight, topFooter, onBack } = this.props;
     return (

@@ -155,7 +155,6 @@ class User extends Component {
 
     }
     onChange = (date, dateString) => {
-        console.log(date, dateString)
         this.setState({
             select: {
                 page:1,
@@ -169,7 +168,6 @@ class User extends Component {
     }
 
     deleteUser = (id) => {
-        console.log("提示是否需要删除",id); 
         confirm({
             title: '是否确定删除此用户?',
             // content: '完成点击 是 ,未完成点击否',
@@ -211,7 +209,6 @@ class User extends Component {
     }
 
     paginationChange = (current)=>{
-        console.log(current)
         this.setState({
           select: {
             page: current,
@@ -286,7 +283,6 @@ class User extends Component {
                     <Table bordered
                     rowSelection={{
                         onChange: (selectedRowKeys, selectedRows) => {
-                          console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
                         },
                       }}
                       pagination={{

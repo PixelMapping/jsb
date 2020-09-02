@@ -22,7 +22,6 @@ class EditIndustrys extends Component {
 
   onOk = () => {
     this.props.form.validateFields((err, values) => {
-      console.log(values)
       if(values.taxRateSuf == ""){
           this.props.form.setFieldsValue({taxRatePre: ""})
           message.warning("实际汇率未填写完成")
@@ -37,7 +36,6 @@ class EditIndustrys extends Component {
     this.props.onCancel()//调用父组件给的方法
   };
   tax = (e)=>{
-    console.log(e.target.value)
   }
 
 
@@ -54,7 +52,6 @@ class EditIndustrys extends Component {
           sm: { span: 16 },
         },
       };
-      console.log("传过来de shuju ",productclassify);
     
     return (
         <Modal

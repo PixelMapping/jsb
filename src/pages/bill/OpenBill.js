@@ -29,7 +29,6 @@ class OpenBills extends Component {
     onOk = () => {
         this.props.form.validateFields((err, values) => {
             if (err) return;//检查Form表单填写的数据是否满足rules的要求
-            console.log(values)
             this.props.onOk(values);//调用父组件给的onOk方法并传入Form的参数。
             this.props.form.resetFields();//重置Form表单的内容
         })
@@ -72,10 +71,8 @@ class OpenBills extends Component {
             },
             onChange(info) {
                 if (info.file.status !== 'uploading') {
-                    console.log(info.file, info.fileList);
                 }
                 if (info.file.status === 'done') {
-                    console.log("done", info);
                     // message.success(`${info.file.name} file uploaded successfully`);
                 } else if (info.file.status === 'error') {
                     // message.error(`${info.file.name} file upload failed.`);
@@ -83,7 +80,6 @@ class OpenBills extends Component {
             },
         };
 
-        // console.log("娃哈哈",this.state.fileList)
 
         return (
             <Modal

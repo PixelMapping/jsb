@@ -91,7 +91,6 @@ class CorporateLibraryDetail extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props.match.params.id)
     this.setState({
       legalId: this.props.match.params.id
     }, () => {
@@ -109,14 +108,12 @@ class CorporateLibraryDetail extends Component {
   }
   componentWillReceiveProps(nextProps) {
     if (nextProps.companyReducer.getIn(["legaldetail"])) {
-      console.log("法人详情", nextProps.companyReducer.getIn(["legaldetail"]))
       this.setState({
         detail: nextProps.companyReducer.getIn(["legaldetail", "data"])
       })
     }
     //getcompanybylegalid
     if (nextProps.companyReducer.getIn(["getcompanybylegalid"])) {
-      console.log("法人详情123", nextProps.companyReducer.getIn(["getcompanybylegalid"]))
       let data = nextProps.companyReducer.getIn(["getcompanybylegalid", "data","rows"])
       for(let i=0; i<data.length; i++){
           data[i].key = i+1;

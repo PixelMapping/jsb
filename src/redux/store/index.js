@@ -7,7 +7,7 @@ import immutableTransform from "redux-persist-transform-immutable";
 import storage from "redux-persist/es/storage";
 
 import createSagaMiddleware from "redux-saga";
-import logger from "redux-logger";
+// import logger from "redux-logger";
 import { createBrowserHistory } from "history";
 import createRootReducer from "../reducers";
 import rootSaga from "../sagas";
@@ -21,7 +21,8 @@ const historyRouterMiddleware = routerMiddleware(history);
 const sagaMiddleware = createSagaMiddleware();
 
 // 组合middleware
-const middleWares = [sagaMiddleware, historyRouterMiddleware, logger,authTokenMiddleware];
+const middleWares = [sagaMiddleware, historyRouterMiddleware,authTokenMiddleware];
+// const middleWares = [sagaMiddleware, historyRouterMiddleware, logger,authTokenMiddleware];
 
 const migrations = {
   0: state => {
