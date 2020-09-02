@@ -1,0 +1,81 @@
+.ant-layout-sider {
+  background: #fff;
+}
+
+.ant-modal {
+  top: 20px;
+  width: 550px !important;
+}
+
+.ant-modal-content {
+  .ant-modal-body {
+    margin-top: 0 !important;
+  }
+
+  .ant-modal-close {
+    color: #fff;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .ant-modal-header {
+    background: #17A2A9;
+
+    .ant-modal-title {
+      color: #fff;
+    }
+  }
+}
+.ant-btn-primary{
+  background: #17A2A9 !important;
+  border-color: #17A2A9 !important;
+}
+
+.ant-input-affix-wrapper {
+  .ant-input {
+    &:not(:first-child) {
+      padding-left: 45px;
+    }
+  }
+}
+
+.ant-radio-group .ant-radio-button-wrapper-checked{
+  background: #17A2A9 !important;
+  border-color: #17A2A9 !important;
+}
+
+.ant-radio-group .ant-radio-button-wrapper:hover{
+  color: #17A2A9 !important;
+}
+.ant-radio-group .ant-radio-button-wrapper-checked:hover{
+  color:#fff !important;
+}
+
+.ant-spin-nested-loading {
+  div {
+    .ant-spin {
+      background: #f0f2f5;
+      height: 100%;
+      width: 100%;
+      max-height: 100%;
+    }
+  }
+}
+
+.ant-table {
+  .ant-table-thead {
+    tr {
+      background-color: #f0f2f5 !important;
+    }
+  }
+}
+
+.ant-table-small {
+  .ant-table-content {
+    .ant-table-body {
+      margin: 0 !important;
+    }
+  }
+}

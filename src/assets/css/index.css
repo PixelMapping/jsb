@@ -1,0 +1,250 @@
+@media (min-width: 240px) {
+  html {
+    font-size: 44.5%;
+  }
+}
+@media (min-width: 480px) {
+  html {
+    font-size: 46.5%;
+  }
+}
+@media (min-width: 960px) {
+  html {
+    font-size: 48.5%;
+  }
+}
+@media (min-width: 1024px) {
+  html {
+    font-size: 50.5%;
+  }
+}
+@media (min-width: 1280px) {
+  html {
+    font-size: 52.5%;
+  }
+}
+@media (min-width: 1366px) {
+  html {
+    font-size: 54.5%;
+  }
+}
+@media (min-width: 1440px) {
+  html {
+    font-size: 56.5%;
+  }
+}
+@media (min-width: 1680px) {
+  html {
+    font-size: 58.5%;
+  }
+}
+@media (min-width: 1920px) {
+  html {
+    font-size: 60.5%;
+  }
+}
+@media (min-width: 2560px) {
+  html {
+    font-size: 70.5%;
+  }
+}
+
+@media (min-width: 3840px) {
+  html {
+    font-size: 80.5%;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+html {
+  height: 100%;
+  overflow: auto;
+}
+
+body {
+  height: 100%;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* 样式初始化 */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+body,
+button,
+input,
+select,
+textarea {
+  font: 12px/1.5tahoma, arial, \5b8b\4f53;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: couriernew, courier, monospace;
+}
+small {
+  font-size: 12px;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+sup {
+  vertical-align: text-top;
+}
+sub {
+  vertical-align: text-bottom;
+}
+legend {
+  color: #000;
+}
+fieldset,
+img {
+  border: 0;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.sider-container {
+  min-width: 249px !important;
+}
+.ant-menu-item-selected>a{
+  color: #43CF7C !important;
+}
+.ant-menu-vertical .ant-menu-item::after, .ant-menu-vertical-left .ant-menu-item::after, .ant-menu-vertical-right .ant-menu-item::after, .ant-menu-inline .ant-menu-item::after{
+  border-right: 3px solid #43CF7C !important;
+}
+.ant-menu-item:hover{
+  background: #E6F7FF;
+}
+.ant-menu-item>a{
+  text-decoration: none;
+}
+.ant-menu-item>a:hover{
+  text-decoration: none;
+  color: #43CF7C;
+}
+.ant-menu-submenu-title:hover{
+  color: #43CF7C;
+}
+.ant-menu-submenu-title > i :hover{
+  color: #43CF7C;
+}
+.ant-menu-submenu-vertical > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow::after, .ant-menu-submenu-vertical-left > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow::after, .ant-menu-submenu-vertical-right > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow::after, .ant-menu-submenu-inline > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow::after, .ant-menu-submenu-vertical > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow::before, .ant-menu-submenu-vertical-left > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow::before, .ant-menu-submenu-vertical-right > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow::before, .ant-menu-submenu-inline > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow::before{
+  background: #43CF7C;
+}
+.ant-menu{
+  color: #505050 !important;
+}
+.ant-menu-vertical .ant-menu-submenu, .ant-menu-vertical-left .ant-menu-submenu, .ant-menu-vertical-right .ant-menu-submenu, .ant-menu-inline .ant-menu-submenu{
+  padding-bottom: -10px !important;
+}
+.ant-menu-vertical .ant-menu-submenu, .ant-menu-vertical-left .ant-menu-submenu, .ant-menu-vertical-right .ant-menu-submenu, .ant-menu-inline .ant-menu-submenu{
+  padding-bottom: -10px !important;
+}
+.ant-menu-vertical .ant-menu-submenu, .ant-menu-vertical-left .ant-menu-submenu, .ant-menu-vertical-right .ant-menu-submenu, .ant-menu-inline .ant-menu-submenu{
+  padding-bottom: -10px !important;
+}
+.ant-menu-inline .ant-menu-item, .ant-menu-inline .ant-menu-submenu-title{
+  width: 100% !important;
+}
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
+::-webkit-scrollbar  
+{  
+    width: 1px;    
+    background-color: #fff;  
+}  
+
+/*定义滚动条轨道 内阴影+圆角*/  
+::-webkit-scrollbar-track  
+{  
+    -webkit-box-shadow: inset 0 0 6px lightgray;  
+    border-radius: 10px;  
+    background-color: lightgray;  
+}  
+
+/*定义滑块 内阴影+圆角*/  
+::-webkit-scrollbar-thumb  
+{  
+    border-radius: 10px;  
+    /* -webkit-box-shadow: inset 0 0 6px #A1A1A1;   */
+    background-color: #A1A1A1;  
+}  
+/*定义最上方和最下方的按钮*/
+::-webkit-scrollbar-button{
+     background-color:#B3B3B3;
+     border:none ;
+     height:0
+}
+
+/* .ant-btn:hover, .ant-btn:focus{
+  border-color:none !important;
+}
+.ant-btn:active, .ant-btn.active{
+  border-color: none !important;
+} */
+

@@ -1,0 +1,329 @@
+.search-content{
+    width: calc(100% - 36px);
+    background-color: #FFF;
+    margin:0 auto;
+    margin-top:20px;
+    min-height: 120px;
+    height:auto;
+    padding:18px;
+    div> span{
+        margin-right:10px;
+    }
+    .ant-btn:hover, .ant-btn:focus{
+        border-color: #17A2A9;
+    }
+//    ///////////////////////////
+.line{
+    display: flex;
+    justify-content: start;
+    font-size: 14px;
+    & > div:first-child{
+        margin-right: 12px;
+    }
+    & > div:last-child {
+       & > span{
+            padding:3px 10px;
+            cursor: pointer;
+        }
+    }
+
+    & > div:last-child > .active-bg{
+        display: inline-block;
+        background-color: #17A2A9;
+        color: #FFF;
+        padding:3px 10px;
+    }
+    margin-top:15px;
+    margin-bottom: 15px;
+}
+    
+}
+
+.table-content{
+    width: calc(100% - 36px);
+    min-height: calc(100vh - 340px);
+    height: auto;
+    background-color: #FFF;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px;
+}
+.table-content-2{
+    min-height: calc(100vh - 210px);
+    height: auto;
+}
+
+.btn-diy{
+    .ant-btn:hover, .ant-btn:focus{
+        border-color: #17A2A9 !important;
+    }
+}
+
+.divModal{
+    .ant-form-item{
+      margin-bottom: 15px !important;  
+    }
+}
+
+//操作审核中
+
+.one-content{
+    width: 100%;
+    padding: 20px;
+    .name-content{
+        padding-right: 40px;
+        min-height: 150px;
+        height: auto;
+        background: #FFF;
+        padding:20px;
+        position: relative;
+        & > .title{
+            display: flex;
+            padding-right:40px;
+            justify-content: space-between;
+            & > span:first-child{
+                font-size: 20px;
+                font-weight: 600;
+                color: #505050;
+            }
+        }
+        & > .title-detail{
+            margin-top:10px;
+            & > div{
+                display: flex;
+                justify-content: start;
+                span{
+                    width: 25%;
+                    line-height: 30px;
+                    font-size: 15px;
+                }
+            }
+        }
+        & > .state{
+            text-align: center;
+            width:100px;
+            height:100px;
+            position: absolute;
+            right: 90px;
+            top:70px;
+            & > p:last-child{
+                font-size: 20px;
+                font-weight: 600;
+            }
+        }
+        
+
+    }
+    .process{
+        width: 100%;
+        background: #FFF;
+        min-height:150px;
+        height: auto;
+        margin-top:20px;
+        & >p{
+            border-bottom:1px solid #E5E5E5;
+            line-height:36px;
+            padding:0 20px;
+            font-size: 19px;
+            position: relative;
+            .updateData{
+                position: absolute;
+                right: 20px;
+                font-size: 15px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .base{
+        min-height: 200px;
+        height: auto;
+        .base-content{
+            display: flex;
+            justify-content: space-between;
+            & > div{
+                width: 33%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height:270px;
+                padding: 20px;
+
+            }
+        }
+        .base-pic{
+            display: flex;
+            justify-content: start;
+            padding:0px 20px 20px 20px;
+            & > div{
+                margin-right: 60px;
+            }
+            & > div > p{
+                text-align: center;
+                margin-top:10px;
+            }
+        }
+    }
+}
+
+.person{
+    height: 150px !important;
+    min-height: 150px !important;
+    .person-content{
+        height: 100px !important;
+    & > div{
+        height: 100px !important;
+    }
+    
+}
+}
+
+.todo_table{
+    padding: 20px;
+}
+.add{
+    cursor: pointer;
+}
+
+.addProgress{
+    width: 100%;
+    padding: 20px;
+    .borderp{
+        border-bottom: 1px solid #999999;
+        margin-top:15px;
+    }
+}
+
+.pro-con{
+    padding:20px;
+    .progress{
+    width:100%;
+    height: 23px;
+    background-color: #E5E5E5;
+    border-radius: 32px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    & > div{
+        text-align: center;
+        z-index: 2;
+        &>span:first-child{
+            color: #FFF;
+            font-weight: 600;
+            font-size: 15px !important;
+        }
+        & > span:last-child{
+            position: relative;
+            top:5px;
+            font-size: 12px;
+        }
+    }
+}
+.progress-line{
+ // width:58%;
+ height: 23px;
+ background-color: #17A2A9;
+ border-radius: 32px;
+ position: relative;
+ top:-23px
+}
+}
+
+////////////////////////@extend
+.lookList{
+    & > p{
+        line-height: 60px;
+    }
+    & > .lookList-content{
+        display: flex;
+        justify-content: start;
+        & div{
+            text-align: center;
+            margin-right: 20px;
+            img{
+                height: 100px;
+            }
+        }
+    }
+}
+
+.comBlock{
+    display: flex;
+    justify-content: space-between;
+    & > div{
+        width:calc( (100% - 80px)/5 );
+        background: #FFF;
+        height: 120px;
+        margin-top: 20px;
+        text-align: center;
+        & > span:first-child {
+            display: block;
+            margin-top: 30px;
+            font-weight: 550;
+        }
+        & > span:last-child{
+              font-weight: 600;
+              font-size: 26px;  
+        }
+    }
+}
+.zh{
+    img{
+        width: 300px;
+        height: 300px;
+    }
+
+}
+
+// .tables{
+//     min-height:calc(100vh - 500px) !important;
+//     height: auto !important;
+// }
+.tables-content{
+    background: #FFF !important;
+    padding:20px;
+    width: calc(100% - 36px);
+    margin:0 auto;
+    margin-top:20px;
+        min-height:calc(100vh - 500px) !important;
+    height: auto !important;
+}
+
+.tipButton{
+    float: right;
+}
+// 资料补全信息
+.addInfo{
+    background: #FFF;
+    width: 100%;
+    min-height: 200px;
+    margin-top:20px;
+    & > p{
+       border-bottom:1px solid #E5E5E5;
+       line-height: 42px;
+       font-size: 19px;
+       padding-left:20px;
+    }
+    .addInfo-content{
+        padding: 20px;
+    }
+}
+.zpic{
+    img{
+        width: 273px;
+        height: 168px;
+    }
+}
+.fpic{
+    img{
+        width: 273px;
+        height: 168px;
+    }
+}
+
+// ant-upload-list ant-upload-list-text
+.upload_diy{
+    .ant-upload-list,.ant-upload-list-text{
+        display: none !important;
+    }
+}

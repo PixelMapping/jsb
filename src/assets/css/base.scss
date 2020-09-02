@@ -1,0 +1,47 @@
+/* 用于部分页面的统一样式 
+** 创建人:zm
+***2019/04/08
+*/
+.common-con {
+  height: 100%;
+  .mp-layout {
+    height: 100%;
+    .mpl-layout {
+      height: calc(100% - 55px);
+    }
+  }
+}
+
+.ant-tabs-nav .ant-tabs-tab{
+  margin:0 !important
+}
+.ant-calendar-picker:focus .ant-calendar-picker-input:not(.ant-input-disabled){
+  border-color: none !important;
+  outline: none !important;
+}
+.ant-input:focus{
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+// .ant-btn:hover, .ant-btn:focus{
+//   border-color:none !important;
+// }
+// .ant-btn:active, .ant-btn.active{
+//   border-color: none !important;
+// }
+.ant-tabs-ink-bar{
+  background-color: transparent !important;
+}
+
+a{
+  text-decoration: none !important;
+}
+
+.ant-input-suffix{
+  font-size: 12px !important;
+}
+
+// .ant-breadcrumb-link{
+//   cursor: pointer;
+// }

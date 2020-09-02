@@ -1,0 +1,41 @@
+import { createActions } from "redux-actions";
+
+export const orderTypes = {
+//订单列表列表
+ORDERLIST:"ORDERLIST",
+ORDERLIST_SUCCESS:"ORDERLIST_SUCCESS",
+//订单详情
+ORDERDETAIL:"ORDERDETAIL",
+ORDERDETAIL_SUCCESS:"ORDERDETAIL_SUCCESS",
+//订单记录
+ORDERRECORD:"ORDERRECORD",
+ORDERRECORD_SUCCESS:"ORDERRECORD_SUCCESS",
+//确认收款
+COMFIRMOFFLINEPAY:"COMFIRMOFFLINEPAY",
+COMFIRMOFFLINEPAY_SUCCESS:"COMFIRMOFFLINEPAY_SUCCESS",
+//添加备注
+ADDREMARK:"ADDREMARK",
+ADDREMARK_SUCCESS:"ADDREMARK_SUCCESS",
+//订单修改
+UPTORDER:"UPTORDER",
+UPTORDER_SUCCESS:"UPTORDER_SUCCESS",
+//订单数
+GETORDERCOUNT:"GETORDERCOUNT",
+GETORDERCOUNT_SUCCESS:"GETORDERCOUNT_SUCCESS",
+//驳回
+REJECTS:"REJECTS",
+REJECT_SUCCESS:"REJECT_SUCCESS"
+
+
+};
+
+export default createActions({
+[orderTypes.ORDERLIST]: data=> ({data}),
+[orderTypes.ORDERDETAIL]: data=> ({data}),
+[orderTypes.ORDERRECORD]: data=> ({data}),
+[orderTypes.COMFIRMOFFLINEPAY]: data=> ({data}),
+[orderTypes.ADDREMARK]: data=> ({data}),
+[orderTypes.UPTORDER]: data=> ({data}),
+[orderTypes.GETORDERCOUNT]: data=> ({data}),
+[orderTypes.REJECTS]: data=> ({data}),
+});
